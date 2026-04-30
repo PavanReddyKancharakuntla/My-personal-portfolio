@@ -24,7 +24,6 @@ const COLORS = {
   background: '#050505',
 };
 
-const profileImage = new URL('./image/img.jpg', import.meta.url).href;
 const ayurvedaImage = new URL('./image/ayurveda.png', import.meta.url).href;
 
 const navLinks = [
@@ -41,7 +40,7 @@ const projects = [
     category: 'Full-stack Application',
     description: 'A comprehensive digital marketplace for traditional Ayurvedic medicine featuring robust search and order management.',
     image: ayurvedaImage,
-    tags: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'MongoDB'],
   },
   {
     id: 2,
@@ -148,15 +147,9 @@ export default function App() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-14 h-14 rounded-full border border-primary p-0.5 relative group">
-                <img 
-                  src={profileImage} 
-                  alt="Pavan Reddy" 
-                  className="w-full h-full rounded-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
-                />
-                <div className="absolute inset-0 rounded-full border border-primary animate-ping opacity-20" />
-              </div>
-              <span className="text-xs uppercase tracking-[0.3em] font-bold text-primary">Open to opportunities</span>
+              <span className="inline-flex items-center justify-center rounded-full border border-primary bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] font-bold text-primary">
+                Open to opportunities
+              </span>
             </div>
 
             <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-[1.05] tracking-tighter">
@@ -381,9 +374,9 @@ export default function App() {
           <div className="text-lg font-black text-white tracking-widest">PAVAN REDDY</div>
           
           <div className="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-bold text-neutral-500">
-            <a href="#" className="hover:text-white">Email</a>
-            <a href="#" className="hover:text-white">LinkedIn</a>
-            <a href="#" className="hover:text-white">GitHub</a>
+            <a href="mailto:pavanreddykancharakuntla@gmail.com" className="hover:text-white">Email</a>
+            <a href="https://www.linkedin.com/in/pavan-kumar-reddy-kancharakuntla-6459172b8" target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn</a>
+            <a href="https://github.com/PavanReddyKancharakuntla" target="_blank" rel="noreferrer" className="hover:text-white">GitHub</a>
           </div>
 
           <div className="text-[10px] uppercase font-bold text-neutral-700 tracking-widest">
