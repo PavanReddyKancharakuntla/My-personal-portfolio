@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { 
   Mail, 
   Phone, 
@@ -22,7 +22,10 @@ import { useState, useEffect } from 'react';
 const COLORS = {
   primary: '#FF4D4D',
   background: '#050505',
-}
+};
+
+const profileImage = new URL('./image/img.jpg', import.meta.url).href;
+const ayurvedaImage = new URL('./image/ayurveda.png', import.meta.url).href;
 
 const navLinks = [
   { name: 'Work', href: '#work' },
@@ -37,7 +40,7 @@ const projects = [
     title: 'Online Ayurvedic Medical Store',
     category: 'Full-stack Application',
     description: 'A comprehensive digital marketplace for traditional Ayurvedic medicine featuring robust search and order management.',
-    image: 'https://https://unsplash.com/photos/assorted-item-lot-ur2zmbseUIA?q=80&w=2070&auto=format&fit=crop',
+    image: ayurvedaImage,
     tags: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
   },
   {
@@ -147,7 +150,7 @@ export default function App() {
             <div className="flex items-center gap-4 mb-8">
               <div className="w-14 h-14 rounded-full border border-primary p-0.5 relative group">
                 <img 
-                  src="input_file_0.png" 
+                  src={profileImage} 
                   alt="Pavan Reddy" 
                   className="w-full h-full rounded-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0"
                 />
@@ -293,11 +296,11 @@ export default function App() {
               transition={{ delay: i * 0.2 }}
               className="group"
             >
-              <div className="relative aspect-[4/5] overflow-hidden border border-neutral-900 mb-8 transition-all duration-500 group-hover:border-primary/50">
+              <div className="relative h-[320px] overflow-hidden border border-neutral-900 mb-8 transition-all duration-500 group-hover:border-primary/50 bg-neutral-950">
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
+                  className="w-full h-full object-contain grayscale transition-all duration-1000 group-hover:grayscale-0"
                 />
                 <div className="absolute inset-x-0 bottom-0 p-8 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex gap-2 flex-wrap">
